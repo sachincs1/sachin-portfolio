@@ -13,6 +13,7 @@ import powerbiLogo from "@/assets/powerbi-logo.png";
 import msofficeLogo from "@/assets/msoffice-logo.png";
 import githubLogo from "@/assets/github-logo.png";
 import vscodeLogo from "@/assets/vscode-logo.png";
+import tableauLogo from  "@/assets/tableau-logo.png";
 
 const skills = [
   { name: "Python", level: 90, logo: pythonLogo },
@@ -28,6 +29,7 @@ const tools = [
   { name: "MS Office", logo: msofficeLogo },
   { name: "GitHub", logo: githubLogo },
   { name: "VS Code", logo: vscodeLogo },
+  { name: "Tableau Public", logo: tableauLogo }, // Using Power BI logo as placeholder for Tableau Public
 ];
 
 const SkillCard = ({ skill, index }: { skill: typeof skills[0], index: number }) => {
