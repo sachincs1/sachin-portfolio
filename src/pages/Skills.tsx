@@ -103,40 +103,51 @@ const ToolCard = ({ tool, index }: { tool: typeof tools[0], index: number }) => 
 const Skills = () => {
   return (
     <MainLayout>
-      <SEO 
-        title="My Skills & Tools | Dark Animated Portfolio" 
-        description="Animated skill bars and tool showcase with logos, progress indicators, and smooth hover effects." 
-      />
-      
-      <div className="space-y-12">
+      <SEO title="Skills & Tools - SACHIN's Portfolio" description="Technical skills, programming languages, and tools I use for development." />
+      <section id="skills" className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
         {/* Skills Section */}
         <section className="space-y-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold">Skills</h1>
-            <p className="mt-2 text-muted-foreground">Programming languages and technologies I work with</p>
-          </div>
+          <h1 className="text-3xl sm:text-4xl font-bold">Skills & Tools</h1>
           
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {skills.map((skill, index) => (
-              <SkillCard key={skill.name} skill={skill} index={index} />
-            ))}
-          </div>
-        </section>
+          {/* Programming Languages */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-semibold">Programming Languages</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {skills.map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-center gap-3 p-4 rounded-lg border bg-card hover:bg-accent/50 transition-colors"
+                >
+                  <img src={skill.logo} alt={skill.name} className="w-8 h-8" />
+                  <span className="font-medium">{skill.name}</span>
+                </motion.div>
+              ))}
+            </div>
+          </section>
 
-        {/* Tools Section */}
-        <section className="space-y-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold">Tools</h2>
-            <p className="mt-2 text-muted-foreground">Development tools and software I use daily</p>
-          </div>
-          
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {tools.map((tool, index) => (
-              <ToolCard key={tool.name} tool={tool} index={index} />
-            ))}
-          </div>
+          {/* Tools */}
+          <section className="space-y-6">
+            <h2 className="text-2xl font-semibold">Tools & Technologies</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {tools.map((tool, index) => (
+                <motion.div
+                  key={tool.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: (index + skills.length) * 0.1 }}
+                  className="flex items-center gap-3 p-4 rounded-lg border bg-card hover:bg-accent/50 transition-colors"
+                >
+                  <img src={tool.logo} alt={tool.name} className="w-8 h-8" />
+                  <span className="font-medium">{tool.name}</span>
+                </motion.div>
+              ))}
+            </div>
+          </section>
         </section>
-      </div>
+      </section>
     </MainLayout>
   );
 };

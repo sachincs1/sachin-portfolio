@@ -11,6 +11,7 @@ import Resume from "./pages/Resume";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
+import Certifications from "./pages/Certifications";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const AnimatedRoutes = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/certifications" element={<Certifications />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
