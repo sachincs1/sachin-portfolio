@@ -16,15 +16,16 @@ export default function HeroAbout() {
             className="flex justify-center md:justify-start"
           >
             <div className="relative">
-              {/* Profile Photo */}
               <img
                 src="/profile-photo.jpg"
-                alt="Sachin - Full Stack Developer"
-                className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full border-4 border-primary/20 object-cover shadow-2xl"
+                alt="Sachin - Data Analyst"
+                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full border-4 border-primary/20 object-cover shadow-2xl"
+                style={{
+                  imageRendering: 'auto'
+                }}
               />
-              {/* Decorative Elements */}
-              <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-primary rounded-full animate-pulse delay-1000"></div>
+              <div className="absolute -top-2 -right-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-accent rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 sm:w-4 sm:h-4 md:w-4 md:h-4 bg-primary rounded-full animate-pulse delay-1000"></div>
             </div>
           </motion.div>
 
@@ -38,7 +39,7 @@ export default function HeroAbout() {
             {/* Main Content */}
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
-                Creating Cinematic Web Experiences
+              SACHIN 
               </h1>
               <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
               I’m a Data Analyst passionate about transforming raw data into meaningful stories, using analytics to solve problems and drive informed decisions.n technologies and motion design.

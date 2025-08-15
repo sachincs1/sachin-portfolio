@@ -7,15 +7,14 @@ import { Github, Linkedin, Instagram, Menu, X } from "lucide-react";
 
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/resume", label: "Resume" },
-  { to: "/projects", label: "Projects" },
   { to: "/skills", label: "Skills" },
+  { to: "/projects", label: "Projects" },
   { to: "/certifications", label: "Certifications" },
   { to: "/contact", label: "Contact" },
 ];
 
 const social = [
-  { href: "https://github.com/", Icon: Github, label: "GitHub" },
+  { href: "https://github.com/sachincs1", Icon: Github, label: "GitHub" },
   { href: "https://www.linkedin.com/in/sachin-c-64552126b/", Icon: Linkedin, label: "LinkedIn" },
   { href: "https://www.instagram.com/s.a.c.h.i.n._____?igsh=MWRqemZ3M2d6eXVxYw==", Icon: Instagram, label: "Instagram" },
 ];
@@ -36,10 +35,20 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
           <Link to="/" className="font-semibold tracking-wide hover-scale text-lg">Portfolio</Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-6">
+          <div className="hidden md:flex gap-6 items-center">
             {nav.map((n) => (
               <Link key={n.to} to={n.to} className={`story-link ${location.pathname===n.to? 'text-primary':'text-foreground/80'}`}>{n.label}</Link>
             ))}
+            <motion.a
+              href="/resume.pdf"
+              download
+              aria-label="Download Resume PDF"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.96 }}
+              className="px-3 py-1.5 rounded-md text-sm font-medium transition-colors shadow-sm mix-blend-difference border border-foreground/60 text-foreground hover:bg-foreground hover:text-background"
+            >
+              Resume
+            </motion.a>
           </div>
 
           {/* Social Links & Mobile Menu Button */}
@@ -106,6 +115,16 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
                     {n.label}
                   </Link>
                 ))}
+                <motion.a
+                  href="/resume.pdf"
+                  download
+                  aria-label="Download Resume PDF"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="mt-2 inline-block w-full text-center py-2 rounded-md bg-primary text-primary-foreground text-sm font-medium transition-colors hover:bg-primary/90 shadow-sm hover:shadow-glow"
+                >
+                  Resume
+                </motion.a>
               </div>
             </motion.div>
           )}

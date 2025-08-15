@@ -7,70 +7,29 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-commerce Analytics Dashboard",
-      description: "Comprehensive analytics dashboard for e-commerce business with real-time data visualization using Power BI and Python.",
-      image: "/placeholder.svg",
+      title: "HR Attrition Dashboard",
+      description: "Built an interactive Power BI dashboard to analyze employee attrition trends, identify key retention challenges, and provide actionable insights for HR decision-making.",
+      image: "/dashboard.png",
       category: "Data Analytics",
-      technologies: ["Power BI", "Python", "SQL", "Excel"],
-      github: "https://github.com/yourusername/ecommerce-analytics",
-      live: "https://your-demo-link.com",
+      technologies: ["Power BI", "Excel"],
+      github: "https://github.com/sachincs1/HR-Attrition-PowerBI",
+      live: "https://app.powerbi.com/view?r=eyJrIjoiNWI2NjRmZDMtNzMyMy00ZWNkLTkwMTAtMDI2ODA4ODViZjVkIiwidCI6IjYxYjJkM2UzLTNiMjctNGQ1Zi04ZjgxLTA2NTFjODMyNzljYyJ9",
       featured: true
     },
     {
       id: 2,
-      title: "Customer Segmentation Analysis",
-      description: "Advanced customer segmentation using machine learning algorithms to identify customer behavior patterns and preferences.",
-      image: "/placeholder.svg",
-      category: "Machine Learning",
-      technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
-      github: "https://github.com/yourusername/customer-segmentation",
+      title: "CopBot",
+      description: "AI-based legal assistant bridging the gap between citizens and police, offering multilingual legal query support, smart document search, and FIR draft generation.",
+      image: "/copbot.jpeg",
+      category: "AI & Legal Tech",
+      technologies: ["Flask", "FAISS", "LlamaIndex", "Google Gemini", "HuggingFace"],
+      github: "https://github.com/zealousMW/CopBotv1.5",
       live: "https://your-demo-link.com",
       featured: true
-    },
-    {
-      id: 3,
-      title: "Sales Performance Tracker",
-      description: "Real-time sales performance tracking system with automated reporting and KPI monitoring.",
-      image: "/placeholder.svg",
-      category: "Business Intelligence",
-      technologies: ["Tableau", "SQL", "Excel", "Power BI"],
-      github: "https://github.com/yourusername/sales-tracker",
-      live: "https://your-demo-link.com",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "Predictive Analytics Model",
-      description: "Predictive model for forecasting sales trends and customer behavior using historical data analysis.",
-      image: "/placeholder.svg",
-      category: "Predictive Analytics",
-      technologies: ["Python", "TensorFlow", "SQL", "Jupyter"],
-      github: "https://github.com/yourusername/predictive-model",
-      live: "https://your-demo-link.com",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Data Quality Assessment Tool",
-      description: "Automated tool for assessing and improving data quality across multiple data sources.",
-      image: "/placeholder.svg",
-      category: "Data Engineering",
-      technologies: ["Python", "Pandas", "SQL", "Apache Airflow"],
-      github: "https://github.com/yourusername/data-quality",
-      live: "https://your-demo-link.com",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Market Research Dashboard",
-      description: "Interactive dashboard for market research data with competitive analysis and trend visualization.",
-      image: "/placeholder.svg",
-      category: "Market Research",
-      technologies: ["Tableau", "Python", "Excel", "SQL"],
-      github: "https://github.com/yourusername/market-research",
-      live: "https://your-demo-link.com",
-      featured: false
     }
+    
+    
+   
   ];
 
   return (
