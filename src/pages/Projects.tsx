@@ -24,7 +24,18 @@ export default function Projects() {
       category: "AI & Legal Tech",
       technologies: ["Flask", "FAISS", "LlamaIndex", "Google Gemini", "HuggingFace"],
       github: "https://github.com/zealousMW/CopBotv1.5",
-      live: "https://your-demo-link.com",
+      live: "",
+      featured: true
+    },
+    {
+      id: 3,
+      title: "Walmart Sales Dashboard",
+      description: "An interactive Power BI dashboard analyzing Walmart sales trends, top products, regional performance, and customer segments with KPIs and time-series insights.",
+      image: "/Walmart-Dashboard.png",
+      category: "Data Analytics & BI",
+      technologies: ["Power BI", "DAX", "Data Modeling", "Data Visualization"],
+      github: "https://github.com/sachincs1/Walmart-Dashboard",
+      live: "https://app.powerbi.com/view?r=eyJrIjoiZjIwYzhkZWItMGIzMC00MzFhLTgwMzItOTgzM2JkODg0MjM2IiwidCI6IjYxYjJkM2UzLTNiMjctNGQ1Zi04ZjgxLTA2NTFjODMyNzljYyJ9",
       featured: true
     }
     
