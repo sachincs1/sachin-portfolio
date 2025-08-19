@@ -6,7 +6,29 @@ import { ExternalLink, Github, Eye } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
+      id: 4,
+      title: "Airline Analysis Dashboard",
+      description: "Interactive Power BI dashboard analyzing airline performance with insights into total flights, delays, cancellations, and on-time trends. Includes KPIs, pie charts, bar graphs, and trend lines for better decision-making.",
+      image: "/airline.png",
+      category: "Data Analytics & Visualization",
+      technologies: ["Power BI", "Excel", "Data Visualization"],
+      github: "https://github.com/sachincs1/Airline-Analysis",
+      live: "https://app.powerbi.com/view?r=eyJrIjoiMDgwY2JhOGQtMDU2Mi00MzdkLTkyYWMtMTc2YTA5N2FiNTBlIiwidCI6IjYxYjJkM2UzLTNiMjctNGQ1Zi04ZjgxLTA2NTFjODMyNzljYyJ9",
+      featured: true
+    },    
+    {
       id: 1,
+      title: "Walmart Sales Dashboard",
+      description: "An interactive Power BI dashboard analyzing Walmart sales trends, top products, regional performance, and customer segments with KPIs and time-series insights.",
+      image: "/Walmart-Dashboard.png",
+      category: "Data Analytics & BI",
+      technologies: ["Power BI", "DAX", "Data Modeling", "Data Visualization"],
+      github: "https://github.com/sachincs1/Walmart-Dashboard",
+      live: "https://app.powerbi.com/view?r=eyJrIjoiZjIwYzhkZWItMGIzMC00MzFhLTgwMzItOTgzM2JkODg0MjM2IiwidCI6IjYxYjJkM2UzLTNiMjctNGQ1Zi04ZjgxLTA2NTFjODMyNzljYyJ9",
+      featured: true
+    },
+    {
+      id: 2,
       title: "HR Attrition Dashboard",
       description: "Built an interactive Power BI dashboard to analyze employee attrition trends, identify key retention challenges, and provide actionable insights for HR decision-making.",
       image: "/dashboard.png",
@@ -17,7 +39,7 @@ export default function Projects() {
       featured: true
     },
     {
-      id: 2,
+      id: 3,
       title: "CopBot",
       description: "AI-based legal assistant bridging the gap between citizens and police, offering multilingual legal query support, smart document search, and FIR draft generation.",
       image: "/copbot.jpeg",
@@ -27,17 +49,6 @@ export default function Projects() {
       live: "",
       featured: true
     },
-    {
-      id: 3,
-      title: "Walmart Sales Dashboard",
-      description: "An interactive Power BI dashboard analyzing Walmart sales trends, top products, regional performance, and customer segments with KPIs and time-series insights.",
-      image: "/Walmart-Dashboard.png",
-      category: "Data Analytics & BI",
-      technologies: ["Power BI", "DAX", "Data Modeling", "Data Visualization"],
-      github: "https://github.com/sachincs1/Walmart-Dashboard",
-      live: "https://app.powerbi.com/view?r=eyJrIjoiZjIwYzhkZWItMGIzMC00MzFhLTgwMzItOTgzM2JkODg0MjM2IiwidCI6IjYxYjJkM2UzLTNiMjctNGQ1Zi04ZjgxLTA2NTFjODMyNzljYyJ9",
-      featured: true
-    }
     
     
    

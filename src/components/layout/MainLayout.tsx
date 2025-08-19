@@ -4,6 +4,7 @@ import AnimatedGradientBlobs from "@/components/common/AnimatedGradientBlobs";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, Linkedin, Instagram, Menu, X } from "lucide-react";
+import LiveViewers from "@/components/common/LiveViewers";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -51,8 +52,9 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
             </motion.a>
           </div>
 
-          {/* Social Links & Mobile Menu Button */}
+          {/* Live Viewers, Social Links & Mobile Menu Button */}
           <div className="flex items-center gap-3">
+            <LiveViewers />
             {/* Social Links - Hidden on very small screens */}
             <div className="hidden sm:flex items-center gap-3">
               {social.map(({ href, Icon, label }) => (
