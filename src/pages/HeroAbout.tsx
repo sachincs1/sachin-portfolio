@@ -39,7 +39,7 @@ export default function HeroAbout() {
             {/* Main Content */}
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
-              SACHIN 
+              SACHIN C
               </h1>
               <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
               I’m a Data Analyst passionate about transforming raw data into meaningful stories, using analytics to solve problems and drive informed decisions.n technologies and motion design.
