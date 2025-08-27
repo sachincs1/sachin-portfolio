@@ -33,7 +33,7 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
 
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
         <nav className="container mx-auto flex items-center justify-between py-3 px-4">
-          <Link to="/" className="font-semibold tracking-wide hover-scale text-lg">Portfolio</Link>
+          <Link to="/" className="font-semibold tracking-wide hover-scale text-lg"> Sachin's Portfolio</Link>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-6 items-center">
