@@ -41,9 +41,17 @@ export default function HeroAbout() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
               SACHIN C
               </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
-              I’m a Data Analyst passionate about transforming raw data into meaningful stories, using analytics to solve problems and drive informed decisions.n technologies and motion design.
-              </p>
+              <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed text-justify">
+  I specialize in analyzing complex datasets and transforming them into interactive dashboards and strategic insights. I enjoy solving real-world business problems using analytics, visualization, and automation techniques.
+</p>
+              <a
+                href="/Sachin_Data_Analyst_BE_CSE_25.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-4 py-2 mt-4 bg-primary text-white rounded hover:bg-primary/80 transition"
+              >
+                Download Resume
+              </a>
             </div>
 
             {/* About Me Section */}
@@ -52,19 +60,18 @@ export default function HeroAbout() {
               <ul className="grid gap-3 text-base sm:text-lg text-muted-foreground">
                 <li className="flex items-center gap-3 animate-fade-in [animation-delay:0.1s]">
                   <span className="w-2 h-2 bg-primary rounded-full"></span>
-                  Skilled in SQL, Python, Excel, and data visualization
+                  Expertise in SQL, Python, Excel, Power BI, and DAX
                 </li>
                 <li className="flex items-center gap-3 animate-fade-in [animation-delay:0.2s]">
                   <span className="w-2 h-2 bg-primary rounded-full"></span>
-                  Experienced in AI, e-commerce, and real-time analytics projects
+                  Experience working on AI, analytics, and business intelligence projects                </li>
+                <li className="flex items-center gap-3 animate-fade-in [animation-delay:0.3s]">
+                  <span className="w-2 h-2 bg-primary rounded-full"></span>
+                  Strong data storytelling and visualization skills
                 </li>
                 <li className="flex items-center gap-3 animate-fade-in [animation-delay:0.3s]">
                   <span className="w-2 h-2 bg-primary rounded-full"></span>
-                  Strong analytical and problem-solving mindset
-                </li>
-                <li className="flex items-center gap-3 animate-fade-in [animation-delay:0.3s]">
-                  <span className="w-2 h-2 bg-primary rounded-full"></span>
-                  Dedicated to delivering impactful, data-driven solutions
+                  Focused on building impactful and decision-driven analytics solutions
                 </li>
               </ul>
             </div>

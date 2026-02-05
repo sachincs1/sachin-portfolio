@@ -1,6 +1,8 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Badge, Calendar, ExternalLink, Award } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAws } from '@fortawesome/free-brands-svg-icons';
 import MainLayout from "@/components/layout/MainLayout";
 import SEO from "@/components/seo/SEO";
 
@@ -9,16 +11,26 @@ export default function Certifications() {
 
   const certifications = [
     {
-      name: "Deloitte Australia – Data Analytics Job Simulation",
-      issuer: "Deloitte",
-      date: "Jul 2025",
-      credentialId: "6nS1CTsY7hCGWJ65P",
+      name: "Data Analytics Certification",
+      issuer: "Besant Technologies",
+      date: "2025",
+      credentialId: " ",
       category: "Data Analytics",
       logo: "📊",
-      description: "Gained practical experience in data analysis, data modeling, Tableau, and spreadsheet-based insights.",
-      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_7gZxhrnC2wE5AaAtL_1751540167964_completion_certificate.pdf"
-    },
-    {
+      description: "Training in Data Analytics including Excel, SQL, Power BI, data visualization, and data analysis techniques.",
+     
+  },
+  {
+      name: "AWS Certified Cloud Practitioner",
+      issuer: "Amazon Web Services (AWS)",
+      date: "2025",
+      credentialId: "",
+      category: "Cloud Computing",
+      logo: "☁️",
+      description: "Foundational understanding of AWS Cloud concepts, services, security, architecture, pricing, and support.",
+      link: "https://www.credly.com/badges/86e91d11-d3e5-4912-8b17-548952fdc084/public_url"
+  },  
+   {
       name: "Data Analytics with AI",
       issuer: "Sololearn",
       date: "Jun 2025",
