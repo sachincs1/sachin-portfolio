@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Form</title>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <form id="contactForm">
+    <input name="name" placeholder="Name" required /><br/>
+    <input name="email" type="email" placeholder="Email" required /><br/>
+    <input name="subject" placeholder="Subject" required /><br/>
+    <textarea name="message" placeholder="Message" required></textarea><br/>
+    <button type="submit">Send</button>
+  </form>
+  <div id="result"></div>
+  <script>
+    document.getElementById('contactForm').onsubmit = async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value,
+      };
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const result = await res.json();
+      document.getElementById('result').textContent = result.success ? 'Message sent!' : result.error;
+      form.reset();
+    };
+  </script>
+</body>
+</html>

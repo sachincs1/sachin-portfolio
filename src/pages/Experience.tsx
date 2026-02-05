@@ -214,7 +214,7 @@ const Experience = () => {
                 Get In Touch
               </motion.a>
               <motion.a
-                href="/resume.pdf"
+                href="Sachin_Data_Analyst_Resume.pdf"
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

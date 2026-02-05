@@ -13,15 +13,25 @@ import powerbiLogo from "@/assets/powerbi-logo.png";
 import msofficeLogo from "@/assets/msoffice-logo.png";
 import githubLogo from "@/assets/github-logo.png";
 import vscodeLogo from "@/assets/vscode-logo.png";
-import tableauLogo from  "@/assets/tableau-logo.png";
+import tableauLogo from "@/assets/tableau-logo.png";
+
+// ⭐ AWS Logos
+import awsLogo from "@/assets/AWS.png";
+import s3Logo from "@/assets/s3.png";
+import ec2Logo from "@/assets/EC2.png";
+import lambdaLogo from "@/assets/lambda.png";
+import cloudwatchLogo from "@/assets/cloudwatch.png";
 
 const skills = [
-  { name: "Python", level: 90, logo: pythonLogo },
+  { name: "Python", level: 60, logo: pythonLogo },
   { name: "MySQL", level: 85, logo: mysqlLogo },
-  { name: "R Programming", level: 75, logo: rLogo },
+  { name: "R Programming", level: 50, logo: rLogo },
   { name: "HTML", level: 95, logo: htmlLogo },
   { name: "CSS", level: 90, logo: cssLogo },
   { name: "JavaScript", level: 88, logo: javascriptLogo },
+
+  // ⭐ AWS Skill Level
+  { name: "AWS Cloud", level: 60, logo: awsLogo },
 ];
 
 const tools = [
@@ -29,89 +39,36 @@ const tools = [
   { name: "MS Office", logo: msofficeLogo },
   { name: "GitHub", logo: githubLogo },
   { name: "VS Code", logo: vscodeLogo },
-  { name: "Tableau Public", logo: tableauLogo }, // Using Power BI logo as placeholder for Tableau Public
+  { name: "Tableau Public", logo: tableauLogo },
+
+  // ⭐ AWS Tools
+  { name: "Amazon S3", logo: s3Logo },
+  { name: "Amazon EC2", logo: ec2Logo },
+  { name: "AWS Lambda", logo: lambdaLogo },
+  { name: "AWS CloudWatch", logo: cloudwatchLogo },
 ];
-
-const SkillCard = ({ skill, index }: { skill: typeof skills[0], index: number }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="rounded-xl border border-border/50 bg-card/30 p-6 backdrop-blur-sm"
-    >
-      <div className="mb-4 flex items-center gap-4">
-        <motion.img
-          src={skill.logo}
-          alt={`${skill.name} logo`}
-          className="h-12 w-12"
-          whileHover={{ scale: 1.1, rotate: 5 }}
-          transition={{ duration: 0.2 }}
-        />
-        <h3 className="text-lg font-semibold">{skill.name}</h3>
-      </div>
-      
-      <div className="space-y-2">
-        <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: `${skill.level}%` }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 1.5, ease: "easeOut", delay: index * 0.1 + 0.3 }}
-            className="h-full rounded-full bg-gradient-to-r from-primary to-accent"
-          />
-        </div>
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: index * 0.1 + 0.8 }}
-          className="text-center text-sm text-muted-foreground"
-        >
-          {skill.level}%
-        </motion.p>
-      </div>
-    </motion.div>
-  );
-};
-
-const ToolCard = ({ tool, index }: { tool: typeof tools[0], index: number }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ scale: 1.02 }}
-      className="rounded-xl border border-border/50 bg-card/30 p-6 backdrop-blur-sm transition-all duration-300 hover:border-accent/50 hover:shadow-glow"
-    >
-      <div className="flex items-center gap-4">
-        <motion.img
-          src={tool.logo}
-          alt={`${tool.name} logo`}
-          className="h-12 w-12"
-          whileHover={{ scale: 1.15, rotate: 8 }}
-          transition={{ duration: 0.2 }}
-        />
-        <h3 className="text-lg font-semibold">{tool.name}</h3>
-      </div>
-    </motion.div>
-  );
-};
 
 const Skills = () => {
   return (
     <MainLayout>
-      <SEO title="Skills & Tools - SACHIN's Portfolio" description="Technical skills, programming languages, and tools I use for development." />
-      <section id="skills" className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
-        {/* Skills Section */}
+      <SEO
+        title="Skills & Tools - SACHIN's Portfolio"
+        description="Technical skills, programming languages, and tools I use for development."
+      />
+
+      <section
+        id="skills"
+        className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20"
+      >
         <section className="space-y-8">
           <h1 className="text-3xl sm:text-4xl font-bold">Skills & Tools</h1>
-          
+
           {/* Programming Languages */}
           <section className="space-y-6">
-            <h2 className="text-2xl font-semibold">Programming Languages</h2>
+            <h2 className="text-2xl font-semibold">
+              Programming & Cloud Skills
+            </h2>
+
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {skills.map((skill, index) => (
                 <motion.div
@@ -119,28 +76,59 @@ const Skills = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-center gap-3 p-4 rounded-lg border bg-card hover:bg-accent/50 transition-colors"
+                  className="rounded-xl border border-border/50 bg-card/30 p-6 backdrop-blur-sm"
                 >
-                  <img src={skill.logo} alt={skill.name} className="w-8 h-8" />
-                  <span className="font-medium">{skill.name}</span>
+                  <div className="mb-4 flex items-center gap-4">
+                    <img
+                      src={skill.logo}
+                      alt={skill.name}
+                      className="h-12 w-12"
+                    />
+                    <h3 className="text-lg font-semibold">{skill.name}</h3>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${skill.level}%` }}
+                        transition={{ duration: 1 }}
+                        className="h-full rounded-full bg-gradient-to-r from-primary to-accent"
+                      />
+                    </div>
+
+                    <p className="text-center text-sm text-muted-foreground">
+                      {skill.level}%
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>
           </section>
 
-          {/* Tools */}
+          {/* Tools & Technologies */}
           <section className="space-y-6">
-            <h2 className="text-2xl font-semibold">Tools & Technologies</h2>
+            <h2 className="text-2xl font-semibold">
+              Tools & Technologies
+            </h2>
+
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {tools.map((tool, index) => (
                 <motion.div
                   key={tool.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: (index + skills.length) * 0.1 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
+                  }}
                   className="flex items-center gap-3 p-4 rounded-lg border bg-card hover:bg-accent/50 transition-colors"
                 >
-                  <img src={tool.logo} alt={tool.name} className="w-8 h-8" />
+                  <img
+                    src={tool.logo}
+                    alt={tool.name}
+                    className="w-8 h-8"
+                  />
                   <span className="font-medium">{tool.name}</span>
                 </motion.div>
               ))}

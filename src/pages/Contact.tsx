@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from "lucide-react";
 import SEO from "@/components/seo/SEO";
 import MainLayout from "@/components/layout/MainLayout";
+import React from "react";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -29,10 +30,25 @@ const Contact = () => {
     resolver: zodResolver(contactSchema),
   });
 
+  const [serverMessage, setServerMessage] = React.useState<string | null>(null);
+
   const onSubmit = async (data: ContactForm) => {
-    console.log(data);
-    // Here you would typically send the data to your backend
-    reset();
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const result = await res.json();
+      if (result.success) {
+        setServerMessage('Message sent!');
+        reset();
+      } else {
+        setServerMessage(result.error || 'Failed to send message.');
+      }
+    } catch (error) {
+      setServerMessage('Failed to send message.');
+    }
   };
 
   const contactInfo = [
@@ -51,7 +67,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Madurai, Tamil Nadu",
+      value: "Chennai, Tamil Nadu",
       link: "#"
     }
   ];
@@ -170,15 +186,41 @@ const Contact = () => {
                 <Button type="submit" className="w-full sm:w-auto">
                   Send Message
                 </Button>
+                {/* Availability Section - moved below Send Message button */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 1.0 }}
+                  className="pt-6 border border-border/20 rounded-lg bg-card shadow-sm mb-6"
+                >
+                  <h3 className="text-lg font-semibold mb-4">Availability</h3>
+                  <p className="text-muted-foreground mb-2">
+                    I'm currently available for:
+                  </p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-primary rounded-full"></span>
+                      Data Analysis Projects
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-primary rounded-full"></span>
+                      Business Intelligence Solutions
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-primary rounded-full"></span>
+                      Freelance Opportunities
+                    </li>
+                  </ul>
+                </motion.div>
               </form>
 
-              {isSubmitSuccessful && (
+              {serverMessage && (
                 <motion.div 
                   initial={{ opacity: 0, y: 10 }} 
                   animate={{ opacity: 1, y: 0 }} 
-                  className="rounded-md border border-green-500/30 bg-emerald-500/10 p-4 text-emerald-300 text-center"
+                  className={`rounded-md border p-4 text-center ${serverMessage === 'Message sent!' ? 'border-green-500/30 bg-emerald-500/10 text-emerald-300' : 'border-red-500/30 bg-red-500/10 text-red-300'}`}
                 >
-                  Thanks! Your message has been sent.
+                  {serverMessage}
                 </motion.div>
               )}
             </motion.div>
@@ -190,8 +232,6 @@ const Contact = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="space-y-8"
             >
-              <h2 className="text-2xl font-semibold mb-6">Get In Touch</h2>
-              
               {/* Contact Details */}
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
@@ -225,12 +265,13 @@ const Contact = () => {
                 {/* GitHub Link Above Icons */}
                 <div className="mb-4">
                   <a 
-                    href="https://github.com/sachincs1"
+                    href="https://www.linkedin.com/in/sachin-c-64552126b/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:text-primary/80 transition-colors font-medium"
                   >
-                    https://github.com/sachincs1
+                  Linkedin/SACHIN
+
                   </a>
                 </div>
                 
@@ -290,34 +331,6 @@ const Contact = () => {
                   </motion.div>
                 </div>
               </div>
-
-              {/* Additional Info - Commented Out
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.0 }}
-                className="pt-6 border-t border-border/20"
-              >
-                <h3 className="text-lg font-semibold mb-4">Availability</h3>
-                <p className="text-muted-foreground mb-2">
-                  I'm currently available for:
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-primary rounded-full"></span>
-                    Data Analysis Projects
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-primary rounded-full"></span>
-                    Business Intelligence Solutions
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-primary rounded-full"></span>
-                    Freelance Opportunities
-                  </li>
-                </ul>
-              </motion.div>
-              */}
             </motion.div>
           </div>
         </section>

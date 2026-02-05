@@ -6,27 +6,27 @@ import { ExternalLink, Github, Eye } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
-      id: 4,
-      title: "Airline Analysis Dashboard",
-      description: "Interactive Power BI dashboard analyzing airline performance with insights into total flights, delays, cancellations, and on-time trends. Includes KPIs, pie charts, bar graphs, and trend lines for better decision-making.",
-      image: "/airline.png",
+      id: 5,
+      title: "Sales Performance Dashboard",
+      description: "Power BI dashboard analyzing sales performance with insights into revenue trends, top-selling products, regional performance, and monthly growth analysis. Includes KPIs, interactive filters, and dynamic charts for business insights.",
+      image: "/Sales.png",
       category: "Data Analytics & Visualization",
-      technologies: ["Power BI", "Excel", "Data Visualization"],
-      github: "https://github.com/sachincs1/Airline-Analysis",
-      live: "https://app.powerbi.com/view?r=eyJrIjoiMDgwY2JhOGQtMDU2Mi00MzdkLTkyYWMtMTc2YTA5N2FiNTBlIiwidCI6IjYxYjJkM2UzLTNiMjctNGQ1Zi04ZjgxLTA2NTFjODMyNzljYyJ9",
-      featured: true
-    },    
-    {
-      id: 1,
-      title: "Walmart Sales Dashboard",
-      description: "An interactive Power BI dashboard analyzing Walmart sales trends, top products, regional performance, and customer segments with KPIs and time-series insights.",
-      image: "/Walmart-Dashboard.png",
-      category: "Data Analytics & BI",
-      technologies: ["Power BI", "DAX", "Data Modeling", "Data Visualization"],
-      github: "https://github.com/sachincs1/Walmart-Dashboard",
-      live: "https://app.powerbi.com/view?r=eyJrIjoiZjIwYzhkZWItMGIzMC00MzFhLTgwMzItOTgzM2JkODg0MjM2IiwidCI6IjYxYjJkM2UzLTNiMjctNGQ1Zi04ZjgxLTA2NTFjODMyNzljYyJ9",
+      technologies: ["Power BI", "SQL", "Excel", "DAX"],
+      github: "https://github.com/sachincs1/Sales-Performance-Dashboard",
+      live: "https://app.powerbi.com/view?r=eyJrIjoiYWU0M2M0ZmQtNjBhOS00MTZjLWExMmYtZTc5ZTc3MzIyNDhjIiwidCI6IjdhMDBhM2Y5LTU0NzctNGFmNi04MmU5LTJjYWJlM2RiNzYyNSJ9",
       featured: true
     },
+    {
+      id: 6,
+      title: "Executive Sales Analytics Dashboard",
+      description: "Comprehensive Power BI dashboard analyzing sales, profit, quantity, and discount trends across multiple years. Provides insights by region, city, product, and customer using advanced visuals like YoY trends, moving averages, negative profit analysis, and executive KPI tracking for business decision-making.",
+      image: "/sales-dashboard.png",
+      category: "Data Analytics & Visualization",
+      technologies: ["Power BI", "Excel", "Data Modeling", "DAX"],
+      github: "Add_Your_GitHub_Link",
+      live: "https://app.powerbi.com/view?r=eyJrIjoiN2Y0ZWRkZWUtMTcyZi00YzMwLTkwMmMtZWFiZWJlNTY0Yzc1IiwidCI6IjdhMDBhM2Y5LTU0NzctNGFmNi04MmU5LTJjYWJlM2RiNzYyNSJ9",
+      featured: true
+    },      
     {
       id: 2,
       title: "HR Attrition Dashboard",
@@ -38,6 +38,30 @@ export default function Projects() {
       live: "https://app.powerbi.com/view?r=eyJrIjoiNWI2NjRmZDMtNzMyMy00ZWNkLTkwMTAtMDI2ODA4ODViZjVkIiwidCI6IjYxYjJkM2UzLTNiMjctNGQ1Zi04ZjgxLTA2NTFjODMyNzljYyJ9",
       featured: true
     },
+    {
+      id: 1,
+      title: "Walmart Sales Dashboard",
+      description: "An interactive Power BI dashboard analyzing Walmart sales trends, top products, regional performance, and customer segments with KPIs and time-series insights.",
+      image: "/Walmart-Dashboard.png",
+      category: "Data Analytics & BI",
+      technologies: ["Power BI", "DAX", "Data Modeling", "Data Visualization"],
+      github: "https://github.com/sachincs1/Walmart-Dashboard",
+      live: "https://app.powerbi.com/view?r=eyJrIjoiZjIwYzhkZWItMGIzMC00MzFhLTgwMzItOTgzM2JkODg0MjM2IiwidCI6IjYxYjJkM2UzLTNiMjctNGQ1Zi04ZjgxLTA2NTFjODMyNzljYyJ9",
+      featured: true
+    },
+
+    {
+      id: 4,
+      title: "Airline Analysis Dashboard",
+      description: "Interactive Power BI dashboard analyzing airline performance with insights into total flights, delays, cancellations, and on-time trends. Includes KPIs, pie charts, bar graphs, and trend lines for better decision-making.",
+      image: "/airline.png",
+      category: "Data Analytics & Visualization",
+      technologies: ["Power BI", "Excel", "Data Visualization"],
+      github: "https://github.com/sachincs1/Airline-Analysis",
+      live: "https://app.powerbi.com/view?r=eyJrIjoiMDgwY2JhOGQtMDU2Mi00MzdkLTkyYWMtMTc2YTA5N2FiNTBlIiwidCI6IjYxYjJkM2UzLTNiMjctNGQ1Zi04ZjgxLTA2NTFjODMyNzljYyJ9",
+      featured: true
+    },    
+
     {
       id: 3,
       title: "CopBot",
