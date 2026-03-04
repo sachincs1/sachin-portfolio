@@ -41,7 +41,7 @@ export default function HeroAbout() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
               SACHIN C
               </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed text-justify">
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed text-justify">
   I specialize in analyzing complex datasets and transforming them into interactive dashboards and strategic insights. I enjoy solving real-world business problems using analytics, visualization, and automation techniques.
 </p>
               <a

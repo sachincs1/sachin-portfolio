@@ -147,7 +147,7 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
 
       <footer className="border-t py-6 mt-auto">
         <div className="container mx-auto px-4 sm:px-6 flex justify-center">
-          <p className="text-sm text-muted-foreground">© 2025 Sachin | Data Analyst</p>
+          <p className="text-sm text-muted-foreground">© 2026 Sachin | Data Analyst</p>
         </div>
       </footer>
     </div>
