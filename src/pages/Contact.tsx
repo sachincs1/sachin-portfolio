@@ -88,7 +88,7 @@ const Contact = () => {
     {
       icon: Instagram,
       label: "Instagram",
-      url: "https://www.instagram.com/s.a.c.h.i.n._____?igsh=MWRqemZ3M2d6eXVxYw==",
+      url: "https://www.instagram.com/aerolyx_13?igsh=MWRqemZ3M2d6eXVxYw==",
       color: "hover:text-pink-600"
     }
   ];
