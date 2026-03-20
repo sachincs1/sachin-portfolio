@@ -17,7 +17,7 @@ export default function HeroAbout() {
           >
             <div className="relative">
               <img
-                src="/profile-photo.jpg"
+                src="/profile-photo.png"
                 alt="Sachin - Data Analyst"
                 className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full border-4 border-primary/20 object-cover shadow-2xl"
                 style={{
@@ -44,14 +44,6 @@ export default function HeroAbout() {
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed text-justify">
   I specialize in analyzing complex datasets and transforming them into interactive dashboards and strategic insights. I enjoy solving real-world business problems using analytics, visualization, and automation techniques.
 </p>
-              <a
-                href="/Sachin_Data_Analyst_BE_CSE_25.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-4 py-2 mt-4 bg-primary text-white rounded hover:bg-primary/80 transition"
-              >
-                Download Resume
-              </a>
             </div>
 
             {/* About Me Section */}
@@ -60,7 +52,7 @@ export default function HeroAbout() {
               <ul className="grid gap-3 text-base sm:text-lg text-muted-foreground">
                 <li className="flex items-center gap-3 animate-fade-in [animation-delay:0.1s]">
                   <span className="w-2 h-2 bg-primary rounded-full"></span>
-                  Expertise in SQL, Python, Excel, Power BI, and DAX
+                  Expertise in Power BI, PowerBI Service, SQL, Python, Excel,and DAX
                 </li>
                 <li className="flex items-center gap-3 animate-fade-in [animation-delay:0.2s]">
                   <span className="w-2 h-2 bg-primary rounded-full"></span>

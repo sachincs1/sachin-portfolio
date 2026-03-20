@@ -13,7 +13,7 @@ export default function Projects() {
       category: "Data Analytics & Visualization",
       technologies: ["Power BI", "SQL", "Excel", "DAX"],
       github: "https://github.com/sachincs1/Sales-Performance-Dashboard",
-      live: "https://app.powerbi.com/view?r=eyJrIjoiYWU0M2M0ZmQtNjBhOS00MTZjLWExMmYtZTc5ZTc3MzIyNDhjIiwidCI6IjdhMDBhM2Y5LTU0NzctNGFmNi04MmU5LTJjYWJlM2RiNzYyNSJ9",
+      live: "https://app.powerbi.com/view?r=eyJrIjoiNWU5MzczNzYtOWExZC00NDA5LTk0NDItNGY3Mjc0ZjJmYWEyIiwidCI6IjdhMDBhM2Y5LTU0NzctNGFmNi04MmU5LTJjYWJlM2RiNzYyNSJ9",
       featured: true
     },
     {
@@ -24,8 +24,7 @@ export default function Projects() {
       category: "Data Analytics & Visualization",
       technologies: ["Power BI", "Excel", "Data Modeling", "DAX"],
       github: "Add_Your_GitHub_Link",
-      live: "https://app.powerbi.com/view?r=eyJrIjoiN2Y0ZWRkZWUtMTcyZi00YzMwLTkwMmMtZWFiZWJlNTY0Yzc1IiwidCI6IjdhMDBhM2Y5LTU0NzctNGFmNi04MmU5LTJjYWJlM2RiNzYyNSJ9",
-      featured: true
+      live: "https://app.powerbi.com/view?r=eyJrIjoiYTk5ZjAxODQtNDFlZi00NjA1LTlkNTgtZWI3NmNjMmNmZGQzIiwidCI6IjdhMDBhM2Y5LTU0NzctNGFmNi04MmU5LTJjYWJlM2RiNzYyNSJ9",
     },      
     {
       id: 2,
